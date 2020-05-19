@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.679.0.js"></script>
+  </head>
+  <body>
+    <img id="test" src="" width="200" height="200" />
+    <a href="" id="test2" download>download</a>
+    <script>
+      const s3 = new AWS.S3({
+        region: 'us-east-1',
+        credentials: {
+          accessKeyId: 'dummy',
+          secretAccessKey: 'dummy',
+        },
+        endpoint: 'http://localhost:4572',
+        s3ForcePathStyle: true,
+      })
+
+      s3.getObject(
+        {
+          Bucket: 'awsbucket',
+          Key: '57299368_1178435032318497_4304886857977561088_n.jpg',
+        },
+        (err, data) => {
+          console.log('err', err)
+          console.log('data', data)
+          document.getElementById('test').src = 'data:image/png;base64,' + encode(data.Body)
+          document.getElementById('test2').href = 'data:image/png;base64,' + encode(data.Body)
+        },
+      )
+      function encode(data) {
+        var str = data.reduce(function (a, b) {
+          return a + String.fromCharCode(b)
+        }, '')
+        return btoa(str).replace(/.{76}(?=.)/g, '$&\n')
+      }
+    </script>
+  </body>
+</html>
