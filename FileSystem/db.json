@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "name": "DaiNT2 xxx",
+      "age": 27,
+      "gender": "Male",
+      "department": "History xxx",
+      "car": "Yamaha xxx"
+    },
+    {
+      "name": "DaiNT2 xxx",
+      "age": 27,
+      "gender": "Male",
+      "department": "History xxx",
+      "car": "Yamaha xxx"
+    }
+  ]
+}

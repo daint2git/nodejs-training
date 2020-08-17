@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daint2git/nodejs-training.git"
+  },
+  "keywords": [],
+  "author": "daint2 <daint2dev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daint2git/nodejs-training/issues"
+  },
+  "homepage": "https://github.com/daint2git/nodejs-training#readme",
+  "devDependencies": {
+    "@daint2-configs/eslint-config": "^1.1.0",
+    "eslint": "^7.6.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  }
+}
